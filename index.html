@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ZeeML Open-Source Developer Hub, SDK Specifications &amp; Research Benchmarks</title>
+  <meta name="description" content="Official open-source engineering documentation, client-side linguistic cadence benchmarks, RFC-4180 JSON/CSV data schemas, and academic grading equivalency tools by ZeeML (zeeml.com)." />
+  <link rel="canonical" href="https://zee-ml.github.io/" />
+  <meta name="robots" content="index, follow" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://zeeml.com/#organization",
+        "name": "ZeeML",
+        "url": "https://zeeml.com",
+        "description": "Applied computational linguistics, deterministic data conversion pipelines, and academic grading equivalency tools."
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://zee-ml.github.io/#website",
+        "name": "ZeeML Open-Source Developer & Benchmark Portal",
+        "url": "https://zee-ml.github.io/",
+        "publisher": { "@id": "https://zeeml.com/#organization" }
+      }
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      --zml-bg: #070b14;
+      --zml-surface: #0f172a;
+      --zml-card: #111c33;
+      --zml-border: #1e293b;
+      --zml-text: #f8fafc;
+      --zml-muted: #94a3b8;
+      --zml-emerald: #10b981;
+      --zml-cyan: #06b6d4;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--zml-bg);
+      color: var(--zml-text);
+      line-height: 1.65;
+      padding: 0 1.25rem 4rem;
+    }
+    .zml-container { max-width: 1080px; margin: 0 auto; }
+    header {
+      padding: 3.5rem 0 2.5rem;
+      border-bottom: 1px solid var(--zml-border);
+      margin-bottom: 2.5rem;
+    }
+    .zml-badge {
+      display: inline-block;
+      background: rgba(16, 185, 129, 0.14);
+      border: 1px solid var(--zml-emerald);
+      color: #6ee7b7;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+      letter-spacing: 0.03em;
+    }
+    h1 { font-size: 2.25rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 0.75rem; }
+    .zml-lead { color: var(--zml-muted); font-size: 1.1rem; max-width: 780px; margin-bottom: 1.5rem; }
+    .zml-nav { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+    .zml-btn {
+      display: inline-block;
+      padding: 0.6rem 1.15rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.92rem;
+      text-decoration: none;
+      transition: transform 0.15s ease;
+    }
+    .zml-btn-primary { background: var(--zml-emerald); color: #042f2e; }
+    .zml-btn-secondary { background: var(--zml-surface); color: var(--zml-text); border: 1px solid var(--zml-border); }
+    h2 { font-size: 1.45rem; margin: 2.25rem 0 1rem; color: #e2e8f0; }
+    .zml-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+      gap: 1.15rem;
+    }
+    .zml-card {
+      background: var(--zml-card);
+      border: 1px solid var(--zml-border);
+      border-radius: 12px;
+      padding: 1.35rem;
+    }
+    .zml-card h3 { font-size: 1.08rem; margin-bottom: 0.45rem; }
+    .zml-card h3 a { color: var(--zml-cyan); text-decoration: none; }
+    .zml-card h3 a:hover { text-decoration: underline; }
+    .zml-card p { color: var(--zml-muted); font-size: 0.92rem; }
+    footer {
+      margin-top: 3.5rem;
+      padding-top: 1.75rem;
+      border-top: 1px solid var(--zml-border);
+      color: var(--zml-muted);
+      font-size: 0.88rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    footer a { color: #6ee7b7; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="zml-container">
+    <header>
+      <span class="zml-badge">VERIFIED GITHUB ORGANIZATION • ZEE-ML</span>
+      <h1>ZeeML Open-Source Engineering &amp; Benchmark Portal</h1>
+      <p class="zml-lead">
+        Reference specifications, deterministic algorithms, and reproducible benchmark datasets powering the interactive web utilities at <a href="https://zeeml.com" style="color:#6ee7b7;font-weight:600;">zeeml.com</a>.
+      </p>
+      <nav class="zml-nav" aria-label="Primary platform links">
+        <a class="zml-btn zml-btn-primary" href="https://zeeml.com">Launch ZeeML Platform (zeeml.com)</a>
+        <a class="zml-btn zml-btn-secondary" href="https://zeeml.com/tools">Explore All Interactive Tools</a>
+        <a class="zml-btn zml-btn-secondary" href="https://zeeml.com/about">Engineering Methodology</a>
+        <a class="zml-btn zml-btn-secondary" href="https://github.com/Zee-ML">GitHub Repositories (@Zee-ML)</a>
+      </nav>
+    </header>
+
+    <main>
+      <section aria-labelledby="sec-linguistics">
+        <h2 id="sec-linguistics">1. Computational Linguistics &amp; Syntactic Cadence Workbenches</h2>
+        <div class="zml-grid">
+          <article class="zml-card">
+            <h3><a href="https://zeeml.com/ai-humanizer">AI Text Humanizer &amp; Cadence Engine</a></h3>
+            <p>Rebalances sentence-length standard deviation (burstiness), clause rhythm, and passive-voice ratio for natural editorial flow.</p>
+          </article>
+          <article class="zml-card">
+            <h3><a href="https://zeeml.com/ai-detector">AI Content &amp; Burstiness Detector</a></h3>
+            <p>Evaluates token predictability, structural uniformity, and Yule's K vocabulary diversity across multi-paragraph documents.</p>
+          </article>
+          <article class="zml-card">
+            <h3><a href="https://zeeml.com/paraphrasing-tool">Contextual Paraphrasing Workbench</a></h3>
+            <p>Deterministic and neural clause restructuring with academic, technical, and executive register controls.</p>
+          </article>
+          <article class="zml-card">
+            <h3><a href="https://zeeml.com/grammar-checker">Grammar &amp; Syntax Linter</a></h3>
+            <p>Inspects agreement, punctuation mechanics, run-on clauses, and stylistic readability in real time.</p>
+          </article>
+          <article class="zml-card">
+            <h3><a href="https://zeeml.com/summarizer">Executive Text Summarizer</a></h3>
+            <p>Extractive sentence ranking, TL;DR bullet synthesis, and compression ratio telemetry.</p>
+          </article>
+          <article class="zml-card">
+            <h3><a href="https://zeeml.com/word-counter">Word Counter &amp; Lexical Density Studio</a></h3>
+            <p>Computes word, character, syllable, and sentence counts alongside reading/speaking time and n-gram density.</p>
+          </article>
+        </div>
+      </section>
+
+      <section aria-labelledby="sec-data">
+        <h2 id="sec-data">2. Deterministic Data &amp; Document Conversion Pipelines</h2>
+        <div class="zml-grid">
+          <article class="zml-card">
+            <h3><a href="https://zeeml.com/json-to-csv">JSON to CSV Relational Flattener</a></h3>
+            <p>Transforms deeply nested JSON objects and arrays into RFC-4180 compliant CSV tables and Markdown grids directly in the browser.</p>
+          </article>
+          <article class="zml-card">
+            <h3><a href="https://zeeml.com/pdf-to-word">PDF to Word Layout Reconstructor</a></h3>
+            <p>Extracts multi-column PDF text streams and tabular structures into clean, editable Word (.docx) documents.</p>
+          </article>
+        </div>
+      </section>
+
+      <section aria-labelledby="sec-quant">
+        <h2 id="sec-quant">3. Academic Grading Equivalency &amp; Quantitative Calculators</h2>
+        <div class="zml-grid">
+          <article class="zml-card">
+            <h3><a href="https://zeeml.com/cgpa-calculator">Global CGPA, GPA &amp; Scale Calculator</a></h3>
+            <p>Credit-weighted cumulative GPA and CGPA-to-Percentage normalizer across 45 university grading systems (10.0, 4.0, WES, ECTS, UGC, CBSE).</p>
+          </article>
+          <article class="zml-card">
+            <h3><a href="https://zeeml.com/percentage-calculator">Percentage, Margin &amp; Delta Calculator</a></h3>
+            <p>Solves percentage increase/decrease, proportion ratios, basis-point shifts, and compound changes.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>© 2026 <a href="https://zeeml.com">ZeeML (zeeml.com)</a> • Open-Source Engineering &amp; Research Lab</div>
+      <div>
+        <a href="https://zeeml.com">Home</a> •
+        <a href="https://zeeml.com/tools">All Tools</a> •
+        <a href="https://zeeml.com/about">Methodology</a> •
+        <a href="https://zeeml.com/privacy">Privacy</a> •
+        <a href="https://zeeml.com/terms">Terms</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
